@@ -1,0 +1,26 @@
+# Credentials and environment configuration
+.env
+*.env
+backend/.env
+
+# Database files
+*.db
+forgemind.db
+backend/forgemind.db
+
+# Python virtual environment and caches
+__pycache__/
+*.pyc
+venv/
+backend/venv/
+.pytest_cache/
+
+# Node dependencies and build folders
+node_modules/
+frontend/node_modules/
+dist/
+build/
+.next/
+
+# Generated local user workspaces
+MathApp/

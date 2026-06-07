@@ -1,0 +1,167 @@
+TRD (Technical Requirements Document)
+Frontend
+Next.js 15 with TypeScript
+Tailwind CSS
+Shadcn UI
+React Query
+Zustand for state management
+
+Backend
+Python FastAPI
+LangGraph workflow engine
+WebSocket support for real-time agent updates
+
+Database
+PostgreSQL
+Stores:
+Users
+Projects
+Sessions
+Agent execution history
+Logs
+Qdrant
+Stores:
+Embeddings
+Semantic memory
+Repository knowledge
+Neo4j
+Stores:
+File relationships
+Function dependencies
+Architecture memory graph
+
+Authentication
+Better Auth
+Email and password authentication
+JWT-based sessions
+
+Hosting
+Development
+Docker Compose
+Production
+Docker
+Kubernetes (optional)
+Frontend Hosting
+Vercel (free tier) or
+Self-hosted using Docker
+Backend Hosting
+Self-hosted FastAPI server
+
+Third-Party APIs
+None Required
+The system is designed to operate without paid APIs.
+Optional Integrations
+GitHub API (repository access)
+DuckDuckGo Search
+Tavily Search (optional)
+
+AI Models
+Run locally through Ollama:
+Qwen3-Coder
+Primary coding model.
+DeepSeek-Coder
+Debugging and code generation.
+Llama 3
+Reasoning tasks.
+Gemma
+Lightweight tasks.
+Phi-4
+Planning and orchestration.
+
+Agent Framework
+LangGraph
+LangChain
+PydanticAI
+
+Key Libraries
+Frontend
+TanStack Query
+Zod
+Lucide Icons
+React Hook Form
+Framer Motion
+Zustand
+Backend
+FastAPI
+Pydantic
+SQLAlchemy
+Alembic
+LangGraph
+LangChain
+Tree-Sitter
+LlamaIndex
+NetworkX
+Pytest
+Ruff
+Mypy
+
+Sandbox Execution
+Docker
+Podman
+Generated code runs inside isolated containers.
+
+Monitoring
+Prometheus
+Grafana
+Track:
+Token usage
+Execution time
+Agent success rates
+System health
+
+Environment Variables
+Backend
+DATABASE_URL=QDRANT_URL=QDRANT_API_KEY=NEO4J_URI=NEO4J_USERNAME=NEO4J_PASSWORD=JWT_SECRET=OLLAMA_HOST=GITHUB_TOKEN=
+Frontend
+NEXT_PUBLIC_API_URL=
+
+Constraints
+Must remain free.
+Must support self-hosting.
+Must not require proprietary APIs.
+Must work on laptops with limited resources.
+Must support local LLMs via Ollama.
+Must be modular and extensible.
+Must support repositories with thousands of files.
+Must provide safe sandbox execution.
+Must run entirely offline except for optional GitHub access.
+Must maintain privacy by keeping code and data on the user’s machine.
+
+Architecture
+User
+↓
+Next.js Frontend
+↓
+FastAPI Backend
+↓
+LangGraph
+↓
+Planner Agent
+↓
+Coder Agent
+↓
+Tester Agent
+↓
+Reviewer Agent
+↓
+Documentation Agent
+↓
+Qdrant + Neo4j + PostgreSQL
+↓
+Response
+
+Long-Term Infrastructure
+Future Agents:
+Security Agent
+DevOps Agent
+Database Agent
+Performance Agent
+Debugging Agent
+Refactoring Agent
+Future Capabilities:
+Multi-agent debate
+Self-healing workflows
+Repository intelligence
+Architecture memory graph
+Plugin ecosystem
+Distributed execution
